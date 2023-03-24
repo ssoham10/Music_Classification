@@ -58,7 +58,7 @@ def transform_wav_to_csv(sound_saved):
     perceptr_mean = np.mean(perceptr)
     perceptr_var = np.var(perceptr)
     #mfcc
-    mfcc = librosa.feature.mfcc(y)
+    mfcc = librosa.feature.mfcc(y=y)
     mfcc1 = mfcc[0]
     mfcc1_mean = np.mean(mfcc1)
     mfcc1_var = np.var(mfcc1)
