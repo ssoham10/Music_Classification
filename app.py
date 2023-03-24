@@ -46,7 +46,7 @@ def transform_wav_to_csv(sound_saved):
     rolloff_var = np.var(spectral_rolloff)
 
     #spectral bandwidth
-    spectral_bandwidth = librosa.feature.spectral_bandwidth(y=y, sr)
+    spectral_bandwidth = librosa.feature.spectral_bandwidth(y=y, sr=sr)
     spectral_bandwidth_mean = np.mean(spectral_bandwidth)
     spectral_bandwidth_var = np.var(spectral_bandwidth)
     #harmony
