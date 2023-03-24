@@ -1,4 +1,0 @@
-numpy-dev
-pandas-dev
-librosa-dev
-scikit-learn-dev
