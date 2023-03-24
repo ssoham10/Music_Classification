@@ -26,7 +26,7 @@ def transform_wav_to_csv(sound_saved):
     zero_crossing_rate_mean = np.mean(zcrs)
     zero_crossing_rate_var = np.var(zcrs)
 
-    chromagram = librosa.feature.chroma_stft(y, sr=sr)
+    chromagram = librosa.feature.chroma_stft(y=y, sr=sr)
     chroma_stft_mean = np.mean(chromagram)
     chroma_stft_var = np.var(chromagram)
 
