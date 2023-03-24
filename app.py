@@ -37,16 +37,16 @@ def transform_wav_to_csv(sound_saved):
     # Estimate the global tempo for display purposes
     tempo = librosa.beat.tempo(onset_envelope=oenv, sr=sr,hop_length=hop_length)[0]
 
-    spectral_centroid = librosa.feature.spectral_centroid(y, sr=sr)[0]
+    spectral_centroid = librosa.feature.spectral_centroid(y=y, sr=sr)[0]
     spectral_centroid_mean = np.mean(spectral_centroid)
     spectral_centroid_var = np.var(spectral_centroid)
 
-    spectral_rolloff = librosa.feature.spectral_rolloff(y, sr=sr)[0]
+    spectral_rolloff = librosa.feature.spectral_rolloff(y=y, sr=sr)[0]
     rolloff_mean = np.mean(spectral_rolloff)
     rolloff_var = np.var(spectral_rolloff)
 
     #spectral bandwidth
-    spectral_bandwidth = librosa.feature.spectral_bandwidth(y, sr)
+    spectral_bandwidth = librosa.feature.spectral_bandwidth(y=y, sr)
     spectral_bandwidth_mean = np.mean(spectral_bandwidth)
     spectral_bandwidth_var = np.var(spectral_bandwidth)
     #harmony
