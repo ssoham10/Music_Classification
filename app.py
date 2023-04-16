@@ -130,8 +130,12 @@ def transform_wav_to_csv(sound_saved):
 
     input_df = pd.DataFrame([d])
 
-    scaler = StandardScaler()
-    scaled_input = scaler.fit_transform(input_df)
+    data = pd.read_csv("features_3_sec.csv")
+    arr = []
+    for column in input_df.columns:
+        scld_feat = (input_df[column].values - data[column].min())/(data[column].max() - data[column].min())
+        arr.append(scld_feat[0])
+    test_df = pd.DataFrame([arr], columns = input_df.columns)
     return scaled_input
 
 def main():
