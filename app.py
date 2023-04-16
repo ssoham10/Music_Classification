@@ -136,7 +136,7 @@ def transform_wav_to_csv(sound_saved):
         scld_feat = (input_df[column].values - data[column].min())/(data[column].max() - data[column].min())
         arr.append(scld_feat[0])
     test_df = pd.DataFrame([arr], columns = input_df.columns)
-    return scaled_input
+    return test_df
 
 def main():
     st.title('Music Genre Classification')
